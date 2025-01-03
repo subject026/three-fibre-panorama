@@ -1,14 +1,8 @@
-import { Suspense, useRef } from "react";
-import { Mesh, BackSide, TextureLoader } from "three";
+import { Suspense } from "react";
+import { BackSide, TextureLoader } from "three";
 
 import "./App.css";
-import {
-  Canvas,
-  extend,
-  useFrame,
-  useLoader,
-  useThree,
-} from "@react-three/fiber";
+import { Canvas, extend, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 extend({ OrbitControls });
