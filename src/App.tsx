@@ -7,20 +7,6 @@ import { OrbitControls } from "@react-three/drei";
 
 extend({ OrbitControls });
 
-// function Controls(props) {
-//   const { camera, gl } = useThree();
-//   const ref = useRef<Mesh>(null!);
-//   useFrame(() => ref.current.update());
-//   return (
-//     <orbitControls
-//       ref={ref}
-//       target={[0, 0, 0]}
-//       {...props}
-//       args={[camera, gl.domElement]}
-//     />
-//   );
-// }
-
 function Dome() {
   const texture = useLoader(TextureLoader, "/pano_1723447761907.jpg");
   return (
@@ -35,7 +21,7 @@ function App() {
   return (
     <Canvas camera={{ position: [0, 0, 0.1] }} className="canvas">
       <OrbitControls
-        enableZoom={true}
+        enableZoom={false}
         enablePan={false}
         enableDamping
         dampingFactor={0.2}
