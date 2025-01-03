@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { BackSide, TextureLoader } from "three";
 
 import "./App.css";
@@ -32,20 +32,6 @@ function Dome() {
 }
 
 function App() {
-  const [isGrabbing, setIsGrabbing] = useState<boolean>(false);
-  useEffect(() => {
-    window.onmousedown = () => {
-      setIsGrabbing(true);
-    };
-    window.onmouseup = () => {
-      setIsGrabbing(false);
-    };
-    return () => {
-      window.onmousedown = null;
-    };
-  });
-
-  console.log(isGrabbing);
   return (
     <Canvas camera={{ position: [0, 0, 0.1] }} className="canvas">
       <OrbitControls
